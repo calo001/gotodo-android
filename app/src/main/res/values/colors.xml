@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00A69C</color>
+    <color name="colorPrimaryDark">#037A7E</color>
+    <color name="colorAccent">#f9a825</color>
+
+    <color name="primaryColor">#00a69c</color>
+    <color name="primaryLightColor">#57d8cd</color>
+    <color name="primaryDarkColor">#00766e</color>
+    <color name="secondaryColor">#f9a825</color>
+    <color name="secondaryLightColor">#ffd95a</color>
+    <color name="secondaryDarkColor">#c17900</color>
+
+    <color name="primaryTextColor">#000000</color>
+    <color name="secondaryTextColor">#000000</color>
+    <color name="colorBackground">#081C34</color>
+    <color name="cardview_dark">#062F45</color>
+</resources>

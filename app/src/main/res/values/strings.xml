@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">GoTodo!</string>
+    <string name="username">User name</string>
+    <string name="password">Password</string>
+    <string name="signin">Signin</string>
+    <string name="signup">Signup</string>
+    <string name="login_wellcome">Login with your credentials</string>
+    <string name="signup_wellcome">Type an username and password to create an account</string>
+    <string name="successfull_register">Successful registration</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="new_task">New basicTask</string>
+    <string name="delete">delete</string>
+    <string name="add_new_task">new task</string>
+    <string name="my_todo_list">My todo list</string>
+    <string name="logout">Logout</string>
+    <string name="back">back</string>
+    <string name="back_to_signup_message">Please, back to login screen and use your username and password for signin
+    </string>
+    <string name="error_empty">This field is required</string>
+    <string name="update_task">Update task</string>
+    <string name="wellcome">Welcome</string>
+    <string name="no_task_title">There are no task</string>
+    <string name="no_task_subtitle">Please click on NEW TASK button</string>
+</resources>
