@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.github.calo001.gotodo.R
 import com.github.calo001.gotodo.ui.login.LoginActivity
 
-class SuccessfullRegisterActivity : AppCompatActivity() {
+class SuccessfulRegisterActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

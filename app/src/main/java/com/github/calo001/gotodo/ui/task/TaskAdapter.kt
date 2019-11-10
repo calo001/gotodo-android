@@ -4,15 +4,19 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.github.calo001.gotodo.R
 import com.github.calo001.gotodo.model.Task
+import com.google.android.material.button.MaterialButton
+import com.google.android.material.card.MaterialCardView
 import kotlinx.android.synthetic.main.item_task.view.*
 import java.text.SimpleDateFormat
 
 class TaskAdapter(private var items: MutableList<Task>,
                   private val context: Context,
-                  private val listener: TaskActionsListener): RecyclerView.Adapter<TaskAdapter.TaskViewHolder>() {
+                  private val listener: TaskActionsListener):
+    RecyclerView.Adapter<TaskAdapter.TaskViewHolder>() {
 
     var dateFormat = SimpleDateFormat("E dd MMMM yyyy")
 
@@ -71,10 +75,10 @@ class TaskAdapter(private var items: MutableList<Task>,
     }
 
     class TaskViewHolder(view: View): RecyclerView.ViewHolder(view) {
-        val tvTitle = view.tvTitle
-        val tvDescription = view.tvDescription
-        val btnDelete = view.btnOk
-        val cvItemTask = view.cvItemTask
-        val tvCreatedAt = view.tvCreatedAt
+        val tvTitle: TextView = view.tvTitle
+        val tvDescription: TextView = view.tvDescription
+        val btnDelete: MaterialButton = view.btnOk
+        val cvItemTask: MaterialCardView = view.cvItemTask
+        val tvCreatedAt: TextView = view.tvCreatedAt
     }
 }

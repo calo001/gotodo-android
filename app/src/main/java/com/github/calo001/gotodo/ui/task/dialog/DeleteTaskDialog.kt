@@ -17,6 +17,7 @@ class DeleteTaskDialog: DialogFragment() {
         private const val EXTRA_TITLE = "title"
         private const val EXTRA_DESCRIPTION = "description"
         const val TAG = "delete_dialog"
+
         fun newInstance(id: Int, title: String, description: String): DeleteTaskDialog {
             val fragment = DeleteTaskDialog()
 

@@ -60,19 +60,11 @@ class TasksActivity : AppCompatActivity(), TaskView, TaskActionsListener,
         adapter.registerAdapterDataObserver(object: RecyclerView.AdapterDataObserver() {
             override fun onChanged() {
                 super.onChanged()
-                if (adapter.itemCount == 0) {
-                    showNoTaskMessage(true)
-                } else {
-                    showNoTaskMessage(false)
-                }
+                checkEmptyAdapter()
             }
 
             override fun onItemRangeRemoved(positionStart: Int, itemCount: Int) {
-                if (adapter.itemCount == 0) {
-                    showNoTaskMessage(true)
-                } else {
-                    showNoTaskMessage(false)
-                }
+                checkEmptyAdapter()
             }
         })
     }
@@ -85,6 +77,14 @@ class TasksActivity : AppCompatActivity(), TaskView, TaskActionsListener,
     private fun setupSwipe() {
         swipeRefresh.setOnRefreshListener {
             getAllTask()
+        }
+    }
+
+    private fun checkEmptyAdapter() {
+        if (adapter.itemCount == 0) {
+            showNoTaskMessage(true)
+        } else {
+            showNoTaskMessage(false)
         }
     }
 
@@ -107,13 +107,6 @@ class TasksActivity : AppCompatActivity(), TaskView, TaskActionsListener,
 
         val newDialog = NewTaskDialog.newInstance()
         newDialog.show(ft, UpdateTaskDialog.TAG)
-    }
-
-    fun logout() {
-        MySharedPreferences.clearToken()
-        val intent = Intent(this, LoginActivity::class.java)
-        startActivity(intent)
-        finish()
     }
 
     override fun showUpdateDialog(task: Task) {
@@ -184,6 +177,13 @@ class TasksActivity : AppCompatActivity(), TaskView, TaskActionsListener,
 
     override fun hideProgress() {
         swipeRefresh.isRefreshing = false
+    }
+
+    fun logout() {
+        MySharedPreferences.clearToken()
+        val intent = Intent(this, LoginActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 }
 

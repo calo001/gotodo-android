@@ -61,7 +61,7 @@ class SignupActivity : AppCompatActivity(), SignupView {
     }
 
     override fun onSuccess() {
-        val intent = Intent(this, SuccessfullRegisterActivity::class.java)
+        val intent = Intent(this, SuccessfulRegisterActivity::class.java)
         startActivity(intent)
         finish()
     }

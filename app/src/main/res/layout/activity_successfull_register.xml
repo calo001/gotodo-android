@@ -6,7 +6,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorBackground"
-        tools:context=".ui.signup.SuccessfullRegisterActivity">
+        tools:context=".ui.signup.SuccessfulRegisterActivity">
 
     <TextView
             android:text="@string/successfull_register"
